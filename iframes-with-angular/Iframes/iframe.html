@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+      function communicateWithParent(message){
+        window.top.postMessage('closeIframe', '*')
+      }
+    </script>
+</head>
+<body>
+    <h1>welcome to iframe1</h1>
+    <button onclick = "communicateWithParent('close')">close</button>
+</body>
+</html>
